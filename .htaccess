@@ -1,0 +1,13 @@
+# Apache Configuration for Carbon Car Rental
+# This file configures the web server to automatically load index.php when visiting the directory
+
+# 1. Enable the rewrite engine (necessary for directory configuration)
+RewriteEngine On
+
+# 2. Tell the server to look for index.php as the default file
+# This makes it so that visiting /Carbon/ automatically loads /Carbon/index.php
+DirectoryIndex index.php
+
+# 3. Optional: Redirect index.html requests to index.php if you had an index.html file
+RedirectMatch 301 ^/index.html$ /index.php
+
